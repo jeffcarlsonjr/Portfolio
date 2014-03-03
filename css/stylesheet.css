@@ -1,0 +1,52 @@
+
+.photo{
+    background-color: #eee;
+}
+#photo{
+    background: url('img/background.jpg') no-repeat;
+    background-size: 100% 100%
+}
+
+.addPhoto{
+    color: #eeeeee;
+}
+
+.photoDisplay{
+    
+    margin: 15px auto;
+}
+.photoDisplay ul{
+    list-style: none;
+}
+.photoDisplay ul li{
+    float: left;
+    margin: 5px;
+    border: thin #333 solid;
+}
+
+.displayPhoto{
+    width: 85%;
+    margin: 15px auto;
+    border: thin #eee solid;
+}
+.displayPhoto img{
+    width: 100%;
+}
+nav ul{
+    width:70%; 
+    margin: 13px auto;
+    list-style: none;
+}
+nav li{
+    padding: 0px 1.3em;
+    color: #fff;
+    float: left;
+    font-size: 18px;
+}
+
+nav a{
+    color: #fff;
+}
+nav a:hover{
+    color: red;
+}

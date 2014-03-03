@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Welcome to Jeff's Photo Uploader</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./bootstrap/css/bootstrap.css" rel='stylesheet'/>
+        <link href="./css/stylesheet.css" rel="stylesheet" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="./js/angular.js"></script>
+        <script src="./js/app.js"></script>
+    </head>
+    <body class="photo">
+        <nav class="navbar navbar-inverse" role="navigation">
+            
+        </nav>
+        <div class="container" id="photo" ng-app="APP">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Hello</h2>
+                    <div class="addPhoto col-lg-5">
+                        <h2>Add New Photos</h2>
+                        <form method="post" action="addPhotos.php" enctype="multipart/form-data">
+                            <label>Please select a photo to upload</label><br/>
+                            <input type="file" name="photos" class="form-control" multiple />
+                            <input type="submit" value="Add a Photo" class="btn-primary"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h2>World</h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
