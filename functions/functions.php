@@ -11,7 +11,8 @@ class db
             if(!$myconnect){ echo "Error in the connections"; }
             else
             {
-                $db = mysql_select_db('portfolio', $myconnect);
+                //$db = mysql_select_db('portfolio', $myconnect);
+                $db = mysql_select_db('jeffsPortfolio', $myconnect);
                     if(!$db){ echo "Error in the db selections"; }
             }
     }
