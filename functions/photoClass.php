@@ -4,7 +4,13 @@ class photos
     
     private $target_path ="./images/"; 
     private $target_path1 = "./images/";
-    
+
+    public function __construct() {
+        if(isset($_POST['addPhoto']))
+        {
+            $this->splitPhotos();
+        }
+    }
     
     public function addPhoto()
     {
@@ -71,6 +77,9 @@ class photos
         }
         return json_encode($data);
     }
+                                      
+         
+    
     
     
 }
