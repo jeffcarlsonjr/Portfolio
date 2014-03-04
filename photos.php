@@ -28,7 +28,7 @@ $photo = new photos();
         <div class="container" id="photo" >
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>This page is designed with Bootstrap and I am using a PHP uploader with the Pictures are being displayed using a AngularJS through Json. Please click on the photos on the right and they will display on the left. Feel free to add a photo.</h4>
+                    <h4>This page is designed with Bootstrap and I am using a PHP uploader with the Pictures are being displayed using AngularJS through Json. My photo uploader takes one photo and resizes it twice. Once is 640 x 480 and the second is a thumb 150 x 112. This way we save a ton of load time. Please click on the photos on the right and they will display on the left. Feel free to add a photo.</h4>
                 </div>
                 <div class="col-lg-7">
                     <div class="displayPhoto" >

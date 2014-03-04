@@ -50,3 +50,16 @@ nav a{
 nav a:hover{
     color: red;
 }
+
+.forms{
+    margin: 40px auto;
+    border: thin #333 solid;
+    float: none;
+}
+
+input.ng-invalid {
+  border: 1px solid red;
+}
+input.ng-valid {
+  border: 1px solid green;
+}
