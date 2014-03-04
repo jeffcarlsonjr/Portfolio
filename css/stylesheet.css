@@ -50,3 +50,24 @@ nav a{
 nav a:hover{
     color: red;
 }
+
+input.ng-invalid {
+  border: 1px solid red;
+}
+input.ng-valid {
+  border: 1px solid green;
+}
+.signupFrom{
+    width: 60%;
+    margin: 40px auto;
+    border-left: thin blanchedalmond solid;
+    border-right: thin blanchedalmond solid;
+    padding: 10px;
+  
+}
+#login input.ng-invalid {
+  border: 1px solid #eee;
+}
+#login input.ng-valid {
+  border: 1px solid #eee;
+}

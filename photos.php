@@ -32,13 +32,13 @@ $photo = new photos();
                 </div>
                 <div class="col-lg-7">
                     <div class="displayPhoto" >
-                        <img ng-src="./images/{{first}}"/>
+                        <img ng-src="./images/{{first}}" alt="{{photo.alt}}" title="{{photo.alt}}" />
                     </div>
                     <div class="addPhoto col-lg-5">
                       <h2>Add New Photos</h2>
                       <form method="post" enctype="multipart/form-data" action="addphotos.php">
                             <label>Please select a photo to upload</label><br/>
-                            <input type="file" name="thePhoto" class="form-control"/>
+                            <input type="file" name="file" class="form-control"/>
                             <label>Add a location</label><br/>
                             <input type="text" name="alt" class="form-control" required/><br/>
                             <input type="submit" name="addPhoto" value="Add a Photo" class="btn-primary"/>
@@ -47,7 +47,7 @@ $photo = new photos();
                 </div>
                 <div class="photoDisplay col-lg-5">
                     <ul>
-                        <li ng-repeat="photos in photo"><img ng-src="./imageThumbs/{{photos.path}}" width="100" ng-click="setImage(photos.path)" /></li>
+                        <li ng-repeat="photos in photo"><img ng-src="./imageThumbs/{{photos.path}}"  alt="{{photos.alt}}" title="{{photos.alt}}" width="100" height="75" ng-click="setImage(photos.path)" /></li>
                     </ul>
                 </div>
             </div>

@@ -63,11 +63,11 @@ class photos
     
     public function getPhotos() {
         
-        $query = mysql_query("SELECT path FROM photos ORDER BY date");
+        $query = mysql_query("SELECT path, alt FROM photos ORDER BY date");
         $data = array();
         while($rows = mysql_fetch_assoc($query))
         {
-            $data[] = array('path' => $rows['path']);
+            $data[] = array('path' => $rows['path'], 'alt'=> $rows['alt']);
         }
         return json_encode($data);
     }

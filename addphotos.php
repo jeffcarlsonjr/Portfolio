@@ -2,12 +2,13 @@
 include 'functions/globalClass.php';
 
 
-define ('MAX_SIZE', "400");
+define ('MAX_SIZE', "3000");
 
 $errors=0;
 
  $image =$_FILES["file"]["name"];
  $uploadedfile = $_FILES['file']['tmp_name'];
+
 
   if ($image) 
   {
@@ -20,6 +21,7 @@ $errors=0;
           else
               {
               $size=filesize($_FILES['file']['tmp_name']);
+
               if ($size > MAX_SIZE*1024)
                   {
                   echo "You have exceeded the size limit";
@@ -45,11 +47,11 @@ $errors=0;
                               }
  
                               list($width,$height)=getimagesize($uploadedfile);
-                              $newwidth=60;
+                              $newwidth=640;
                               $newheight=($height/$width)*$newwidth;
                               $tmp=imagecreatetruecolor($newwidth,$newheight);
                               
-                              $newwidth1=25;
+                              $newwidth1=150;
                               $newheight1=($height/$width)*$newwidth1;
                               $tmp1=imagecreatetruecolor($newwidth1,$newheight1);
 
@@ -60,19 +62,17 @@ $width,$height);
                               $filename = "images/". $_FILES['file']['name'];
                               $filename1 = "imageThumbs/". $_FILES['file']['name'];
                               
-                              if(imagejpeg($tmp,$filename,100) && imagejpeg($tmp1,$filename1,100));
-                              {
-                                  $query = "INSERT INTO photos path = '".$image."', alt = '".filter_input(INPUT_POST, "alt")."', date = NOW() ";
+                              imagejpeg($tmp,$filename,100);
+                              imagejpeg($tmp1,$filename1,100);
+                              
+                                  $query = "INSERT INTO photos SET path = '".$image."', alt = '".filter_input(INPUT_POST, "alt")."', date = NOW() ";
                                   echo $query;
-                                  mysql_query($query);
-                              }
-                              
-                              
-                              
-                              
+                                  mysql_query($query) or die(mysql_error());
+                                  
                               imagedestroy($src);
                               imagedestroy($tmp);
                               imagedestroy($tmp1);
+                              echo "<meta http-equiv='refresh' content='0;url=photos.php' />";
                               
                               }
                               
