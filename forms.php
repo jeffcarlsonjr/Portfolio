@@ -15,13 +15,14 @@ and open the template in the editor.
         <script src="./js/angular.js"></script>
         <script src="./js/app.js"></script>
         <script src="./js/formCtrl.js"></script>
+        <script src="./js/angular-route.js"></script>
     </head>
     <body>
         <div class="container">
             
             <div class="row">
                  <div class="col-lg-12">
-                    <h4>This is a simple sign up for where I am using angularJs for both the validation of the form as well as a Json call to store your information in to a database. Once this is loaded, you will be emailed your password for your log in which being redirected to a log-in page.</h4>
+                    <h4>This is a simple sign up page using AngularJs and PHP. AngularJs is useful here because I can control the user information from the user. Again this is a simple form to give a quick idea of what can be done. Please fill out the form and there will be an email to you shortly with our new password for the next page.</h4>
                 </div>
                 <div class=" signupFrom" ng-controller="signupController">
                 <form name="signup_form" nonvalidate ng-submit="signupForm(); uploadForm()">

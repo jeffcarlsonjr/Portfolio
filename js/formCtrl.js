@@ -1,4 +1,5 @@
-var app = angular.module('APP', []);
+var app = angular.module('APP', ['ngRoute']);
+
 app.controller('signupController', function($scope, $http){
     $scope.submitted = false;
     $scope.signupForm = function(){
@@ -17,6 +18,7 @@ app.controller('signupController', function($scope, $http){
                 $scope.status = status;
                 $scope.data = data;
                 $scope.result = data; 
+                alert('Your password as been email to you. Please check your email now.');
             });
             console.log($scope.signup.name)
     }
@@ -25,6 +27,8 @@ app.controller('signupController', function($scope, $http){
 });
 
 // $scope.addComment = function(comment){
+// 
+// http://paddyweblog.blogspot.com/2013/04/navigation-in-angularjs.html
 //        // Validate the comment is not an empty and undefined
 //        if("undefined" != comment.msg){
 //        // Angular AJAX call

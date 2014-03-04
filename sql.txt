@@ -1,0 +1,61 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.6
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Mar 04, 2014 at 11:26 PM
+-- Server version: 5.5.33
+-- PHP Version: 5.5.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `portfolio`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `photos`
+--
+
+CREATE TABLE `photos` (
+  `id` int(13) NOT NULL AUTO_INCREMENT,
+  `path` varchar(56) NOT NULL,
+  `alt` varchar(56) NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `photos`
+--
+
+INSERT INTO `photos` (`id`, `path`, `alt`, `date`) VALUES
+(1, '20140218_134121.jpg', 'Arizona', '2014-03-04 10:28:00'),
+(3, 'Argentina.png', 'USA', '2014-03-04 10:52:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(13) NOT NULL AUTO_INCREMENT,
+  `name` varchar(65) NOT NULL,
+  `email` varchar(126) NOT NULL,
+  `password` varchar(126) NOT NULL,
+  `date` datetime NOT NULL,
+  `lastLogin` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `date`, `lastLogin`) VALUES
+(2, 'Jeff', 'jeff.carlsonjr@gmail.com', '648f047b245d828d4d8501f9340490f3', '2014-03-04 14:09:35', '0000-00-00 00:00:00'),
+(3, 'Jeff', 'jeff.carlsonjr@gmail.com', 'eb1251b174ed2c15cfca1112fbb56c13', '2014-03-04 14:19:14', '2014-03-04 16:50:12');
