@@ -35,11 +35,11 @@ $mail->FromName = "Jeff Carlson";
 $mail->addAddress($email);
 $mail->addReplyTo('jeff.carlsonjr@gmail.com');
 
-$mail->WordWrap = 50;
+$mail->WordWrap = 100;
 $mail->isHTML(true);
 
 $mail->Subject = "Email From Jeff's Website";
-$mail->Body = "Hello ".$name.",<br> Thank you for looking over my site. <br/> Here is your password for the next section:".$password;
+$mail->Body = "Hello ".$name.",<br> Thank you for looking over my site. <br/> Here is your password for the next section:<strong> ".$password."</strong>";
 $mail->Body .= "<br/><br/>Thank you,<br/>Jeff";
 
 $mail->send();

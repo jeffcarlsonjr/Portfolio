@@ -11,6 +11,7 @@ app.controller('signupController', function($scope, $http){
             $scope.signup_form.submitted = true;
         }
     };
+    
     $scope.url = 'uploadForm.php';
     $scope.signupForm = function(){
         $http.post($scope.url,{ "name" : $scope.signup.name, "email" : $scope.signup.email}).
@@ -19,6 +20,7 @@ app.controller('signupController', function($scope, $http){
                 $scope.data = data;
                 $scope.result = data; 
                 alert('Your password as been email to you. Please check your email now.');
+                
             });
             console.log($scope.signup.name)
     }
@@ -26,20 +28,3 @@ app.controller('signupController', function($scope, $http){
     
 });
 
-// $scope.addComment = function(comment){
-// 
-// http://paddyweblog.blogspot.com/2013/04/navigation-in-angularjs.html
-//        // Validate the comment is not an empty and undefined
-//        if("undefined" != comment.msg){
-//        // Angular AJAX call
-//        $http({
-//        method : "POST",
-//        url : "index.php", 
-//        data : "action=add&msg="+comment.msg
-//        }).success(function(data){
-//        // Add the data into DOM for future use
-//        $scope.comments.unshift(data); 
-//        });
-//        $scope.comment = "";
-//        }
-//        }
