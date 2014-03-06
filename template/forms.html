@@ -1,0 +1,53 @@
+<div class="container">
+            
+            <div class="row">
+                 
+                    <h4>This is a simple sign up page using AngularJs and PHP. AngularJs is useful here because I can control the user information from the user. Again this is a simple form to give a quick idea of what can be done. Please fill out the form and there will be an email to you shortly with our new password for the next page.</h4>
+
+                <div class=" signupFrom" ng-controller="signupController">
+                <form name="signup_form" nonvalidate ng-submit="signupForm(); uploadForm()">
+                    
+                        <legend>Sign Up Form</legend>
+                        <label>Your name</label>
+                        <input type="text" placeholder="Name" name="name" ng-model="signup.name" ng-minlength=3 ng-maxlength=20 class="form-control" required />
+                        <div class="error" ng-show="signup_form.name.$dirty && signup_form.name.$invalid">
+                            <small class="error" ng-show="signup_form.name.$error.required">
+                                Your name is required.
+                            </small>
+                            
+                            <small class="error" ng-show="signup_form.name.$error.minlength">Your name is required to be at least 3 characters
+                            
+                            </small>
+                            <small class="error" ng-show="signup_form.name.$error.maxlength">
+                                Your name cannot be longer than 20 characters
+                            </small>
+                        </div>
+                        <!--Email -->
+                        <label>Your Email</label><br/>
+                        <input type="email" placeholder="Email Address" name="email" ng-model="signup.email" ng-minlength=3 ng-maxlength=50 class="form-control" required/>
+                        <div class="error" ng-show="signup_form.email.$dirty && signup_form.email.$invalid">
+                            <small class="error" ng-show="signup_form.email.$error.required">
+                                Your email is required
+                            </small>
+                            <small class="error" ng-show="signup_form.email.$error.minlength">
+                                Your email is required to have at least 3 characters.
+                            </small>
+                            <small class="error" ng-show="signup_form.email.$error.email">
+                                That is not a valid email. Please input a valid email.
+                            </small>
+                            <small class="error" ng-show="signup_form.email.$error.maxlength">
+                                Your email cannot be longer than 20 characters
+                            </small>
+                        </div>
+                            
+                       
+                        
+                        
+                        
+                            <br><button type="submit" ng-disabled="signup_form.$invalid" class="btn-primary">Submit</button>
+                    
+                </form>
+                    
+                </div>
+            </div>
+        </div>

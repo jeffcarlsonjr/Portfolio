@@ -1,26 +1,7 @@
 <?php
 
-interface post_data {
- 
-	// Create interface that the main class will rely on
- 
-	function login_get_data();
-	function login_clean_data();
-	function login_check_data();
- 
-	}
-abstract class sql_server {
- 
-        // Class that handles the SQL connection
-        
-	        
-	public function __construct() {
-            $db = new DB();
-            $db->connect();
-		}
-	}
 
-class Logins extends sql_server implements post_data
+class Logins
 {
     private $loginVars = array('Username'=>null,'Password'=>null);
     
@@ -35,11 +16,11 @@ class Logins extends sql_server implements post_data
 //        ;
 //    }
     
-    public function login_get_data()
+    public function login_get_data($username, $password)
     {
         //Giving error i any of the fields are empty
      
-        if(empty($_POST['username']) || empty($_POST['password']))
+        if(empty($username) || empty($password))
         {
             echo "<script> alert('Make sure that you fill in all the fields')</script>";
             //header('Location: login.php');
@@ -48,8 +29,8 @@ class Logins extends sql_server implements post_data
         
         else
         {
-            $this->loginVars['Username'] = $_POST['username'];
-            $this->loginVars['Password'] = $_POST['password'];
+            $this->loginVars['Username'] = $username;
+            $this->loginVars['Password'] = $password;
             
             $this->login_clean_data();
         }
@@ -76,20 +57,17 @@ class Logins extends sql_server implements post_data
            session_start();
            $_SESSION['id'] = $row['id'];
            
-           $_SESSION['username'] = $this->loginVars['Username'];
-           $_SESSION['password'] = $this->loginVars['Password'];
+           echo json_encode($row['id']);
            
-           header('Location: applications.php');
+//           $_SESSION['username'] = $this->loginVars['Username'];
+//           $_SESSION['password'] = $this->loginVars['Password'];
+//           
+//           header('Location: applications.php');
            die();
        }
        
        
-       else 
-       {
-           echo  "<script> alert('Username/Password combination is invalid')</script>";
-           //header('Location: login.php');
-           //die();
-       }
+       
    }
 }
 

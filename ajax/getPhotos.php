@@ -1,5 +1,5 @@
 <?php
-include 'functions/globalClass.php';
+include '../functions/globalClass.php';
 
 $photo = new photos;
 

@@ -1,0 +1,30 @@
+<div class="container" ng-controller="loginController">
+            <div class="row">
+                <div style="margin:40px auto; width:65%; height: auto; border: thin #cccccc solid; padding: 20px">
+                    <div style="margin: 0px auto; width:90%">
+                        <form method="post" name="login_form" novalidate ng-submit="loginForm()">
+                            <label>
+                                Email Address
+                            </label><br/>
+                            <input type="email" name="username" ng-model="login.username"  placeholder="Email Address" class="form-control" required/>
+                            <div class="error" ng-show="login_form.username.$dirty && login_form.username.$invalid">
+                                <small ng-show="login_form.username.$error.email">Invalid Email Format.</small>
+                                <small ng-show="login_form.username.$error.required">Username is required.</small>
+                            </div>
+                             
+                            <br/>
+                            
+                            <label>
+                                Password
+                            </label><br/>
+                            <input type="password" name="password" ng-model="login.password" placeholder="Password" class="form-control" required/>
+                            <div class="error" ng-show="login_form.password.$dirty && login_form.password.$invalid">
+                                <small ng-show="login_form.password.$error.required">Password is required.</small>
+                            </div>
+                            <br>
+                            <br><button type="submit" ng-disabled="login_form.$invalid" class="btn-primary">Log In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
