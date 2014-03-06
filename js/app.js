@@ -19,7 +19,7 @@ app.config(['$routeProvider', function($routeProvider) {
                 controller: 'loginController'
             }). 
             when('/application', {
-                templateUrl: 'application.php',
+                templateUrl: 'applications.php',
                 controller: 'loginController'
             }).         
             otherwise({redirectTo: '/home'});
@@ -70,18 +70,27 @@ app.controller('loginController', function($scope,$http,$location){
     $scope.url = 'ajax/loginAjax.php';
     $scope.loginForm = function(){
         if($scope.login_form.$valid){
-            $scope.login;
+            
         }
     }
     
-    $scope.login = function(){
+    $scope.loginForm = function(){
     $http.post($scope.url,{'username' : $scope.login.username, 'password' : $scope.login.password}).
                   success(function(data,status){
                       $scope.status = status;
                       $scope.data = data;
                       $scope.result = data;
-                      $location.path('/home');
+                      if($scope.result != '')
+                      {
+                          alert('It is not empty');
+                          $location.path('/application')
+                      }
+                      else
+                      {
+                          $location.path('/home');
+                      }
+                      //
                   });
-                      console.log($scope.data)
+                      
                   }
               });
