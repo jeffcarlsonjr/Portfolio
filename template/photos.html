@@ -1,7 +1,7 @@
 <div class="container" id="photo" >
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>This page is designed with Bootstrap and I am using a PHP uploader with the Pictures are being displayed using a AngularJS through Json. Please click on the photos on the right and they will display on the left. Feel free to add a photo.</h4>
+                    <h3>I built a PHP photo uploader that takes the photo that is uploaded and does 2 things, resizes to 2 different sizes, one for viewing and one for thumbnail. From there they are imported in to 2 separate files. I am then using AngulalJS with an Ajax call to show the picture on the left and right sides. You can also click on the pictures on the right to show them in the left.</h3>
                 </div>
                 <div class="col-lg-7">
                     <div class="displayPhoto" >
@@ -19,6 +19,7 @@
                     </div>
                 </div>
                 <div class="photoDisplay col-lg-5">
+                    <h3 align='center'><b>Click on one of the images</b></h3>
                     <ul>
                         <li ng-repeat="photos in photo"><img ng-src="./imageThumbs/{{photos.path}}"  alt="{{photos.alt}}" title="{{photos.alt}}" width="100" height="75" ng-click="setImage(photos.path)" /></li>
                     </ul>

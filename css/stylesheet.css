@@ -1,11 +1,44 @@
+.home{
+    width: 100%;
+    margin: 0px;
+}
+.home p{
+    font-size: 23px;
+    margin: 15px 0px;
+}
 
+.rightHome{
+    width: 72%;
+    margin: 25px 0px;
+    float: right;
+    padding-right: 1%
+}
+rigthInner{
+    width: 95%;
+}
+
+.leftHome{
+    width: 25%;
+    min-height: 1100px;
+    background-color: #000000;
+    position: fixed;
+}
+.innerLeft{
+    width: 80%;
+    margin: 150px auto 0px;
+    color: #fff;
+    text-align: center;
+}
 .photo{
     background-color: #eee;
 }
 #photo{
     background: url('img/background.jpg') no-repeat;
-    background-size: 100% 100%
+    background-size: 100% 100%;
+    min-height: 800px;
+    overflow: visible;
 }
+
 
 .addPhoto{
     color: #eeeeee;
@@ -72,9 +105,20 @@ input.ng-valid {
   border: 1px solid #eee;
 }
 
-.home img{
-    clip-path: url(#clipping);
-}
+.circular {
+	width: 206px;
+	height: 206px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url('./img/jeff.jpg') no-repeat;
+        margin: 0px auto;
+	}
+
+.circular img {
+	opacity: 85;
+	filter: alpha(opacity=8);
+	}
 
 .application{
     float: none;

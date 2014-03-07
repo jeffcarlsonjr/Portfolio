@@ -31,7 +31,8 @@ app.controller('photoCtrl', function($scope, $http){
     $http.get("ajax/getPhotos.php").success(function(data)
         {
         $scope.photo = data;
-        $scope.first = '20140218_134121.jpg';
+        $scope.first = $scope.photo[0].path;
+        
          });
         
         $scope.setImage = function(imageUrl){
@@ -80,14 +81,13 @@ app.controller('loginController', function($scope,$http,$location){
                       $scope.status = status;
                       $scope.data = data;
                       $scope.result = data;
-                      if($scope.result != '')
+                      if($scope.result !== '')
                       {
-                          alert('It is not empty');
-                          $location.path('/application')
+                          $location.path('/application');
                       }
                       else
                       {
-                          $location.path('/home');
+                          $location.path('/login');
                       }
                       //
                   });

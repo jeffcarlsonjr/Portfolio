@@ -2,12 +2,13 @@
             
             <div class="row">
                  
-                    <h4>This is a simple sign up page using AngularJs and PHP. AngularJs is useful here because I can control the user information from the user. Again this is a simple form to give a quick idea of what can be done. Please fill out the form and there will be an email to you shortly with our new password for the next page.</h4>
+                    <h3>This is a simple sign up page using AngularJs and PHP. AngularJs is useful here because we can control as much as possible that they viewer will be filling in the most accurate information while also making sure that they fill out what we feel is required. Please fill out the form and there will be an email to you shortly with our new password for the next page.</h3>
 
                 <div class=" signupFrom" ng-controller="signupController">
+                    <h3>Sign up form</h3>
                 <form name="signup_form" nonvalidate ng-submit="signupForm(); uploadForm()">
                     
-                        <legend>Sign Up Form</legend>
+                        
                         <label>Your name</label>
                         <input type="text" placeholder="Name" name="name" ng-model="signup.name" ng-minlength=3 ng-maxlength=20 class="form-control" required />
                         <div class="error" ng-show="signup_form.name.$dirty && signup_form.name.$invalid">
