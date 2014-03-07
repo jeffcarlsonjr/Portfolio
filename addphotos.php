@@ -66,13 +66,13 @@ $width,$height);
                               imagejpeg($tmp1,$filename1,100);
                               
                                   $query = "INSERT INTO photos SET path = '".$image."', alt = '".filter_input(INPUT_POST, "alt")."', date = NOW() ";
-                                  echo $query;
+//                                  echo $query; die;
                                   mysql_query($query) or die(mysql_error());
                                   
                               imagedestroy($src);
                               imagedestroy($tmp);
                               imagedestroy($tmp1);
-                              echo "<meta http-equiv='refresh' content='0;url=photos.php' />";
+                              echo "<meta http-equiv='refresh' content='0;url=./index.html#/photos' />";
                               
                               }
                               

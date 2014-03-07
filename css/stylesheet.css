@@ -71,3 +71,46 @@ input.ng-valid {
 #login input.ng-valid {
   border: 1px solid #eee;
 }
+
+.home img{
+    clip-path: url(#clipping);
+}
+
+.application{
+    float: none;
+    margin: 0px auto;
+}
+
+.newsHeader{
+    margin: 0px;
+    padding: 0.4em 13px 0.45em;
+    font-family: 'OpenSansSemiBold', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: rgb(255,255,255);
+    background-color: rgb(0,85,149);
+
+}
+.newsBox{
+    width: 205px;
+    padding: 5px;
+    background-color: rgb(210,219,236); 
+    border-left: 3px solid rgb(0,85,149);
+    color: rgb(101, 102, 102);
+}
+.news{
+    float: left;
+    margin: 65px 0px 0px 35px;
+    width: 205px;
+    font-family: 'OpenSansRegular', sans-serif; 
+    font-size: 13px;
+    line-height: 14px;
+}
+strong{
+    font-weight: normal;
+    font-family: 'OpenSansBold', sans-serif;
+}
+.newsBox a{
+    color: rgb(101, 102, 102);
+}
