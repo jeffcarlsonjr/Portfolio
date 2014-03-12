@@ -56,7 +56,7 @@ class Logins
            
            session_start();
            $_SESSION['id'] = $row['id'];
-           
+           $this->emailMe($this->loginVars['Username']);
            echo json_encode($row['id']);
            
 //           $_SESSION['username'] = $this->loginVars['Username'];
@@ -69,6 +69,24 @@ class Logins
        
        
    }
+   
+   public function emailMe($email)
+   {
+        $mail = new PHPMailer();
+
+        $mail->From = $email;
+        
+        $mail->addAddress('jeff.carlsonjr@gmail.com');
+        $mail->addReplyTo('jeff.carlsonjr@gmail.com');
+        
+
+        $mail->WordWrap = 100;
+        $mail->isHTML(true);
+
+        $mail->Subject = "Just logged in";
+        $mail->Body = "<p>Someone just logged in to you Protfolio site</p>";
+        $mail->send();
+   }
 }
 
 class tools
@@ -78,3 +96,5 @@ class tools
         echo '<meta http-equiv="refresh" content="'.$length.';url='.$where.'">';
     }
 }
+
+

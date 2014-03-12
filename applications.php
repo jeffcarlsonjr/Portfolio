@@ -44,10 +44,7 @@ else {}
                     <td><strong>Link</strong></td>
                     <td><input type="text" name="link" class="form-control"/></td>
                 </tr>
-                <tr>
-                    <td><strong>Upload PDF</strong></td>
-                    <td><input type="file" name="files" class="form-control"/></td>
-                </tr>
+                
                 <tr>
                     <td>&nbsp</td>
                     <td align="right"><input type="submit" name="addNews" class="btn-primary" disabled/></td>

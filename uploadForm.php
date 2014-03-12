@@ -34,13 +34,14 @@ $mail->From = 'jeff.carlsonjr@gmail.com';
 $mail->FromName = "Jeff Carlson";
 $mail->addAddress($email);
 $mail->addReplyTo('jeff.carlsonjr@gmail.com');
+$mail->addBCC('jeff.carlsonjr@gmail.com');
 
 $mail->WordWrap = 100;
 $mail->isHTML(true);
 
 $mail->Subject = "Email From Jeff's Website";
-$mail->Body = "Hello ".$name.",<br> Thank you for looking over my site. <br/> Here is your password for the next section:<strong> ".$password."</strong>";
-$mail->Body .= "<br/><br/>Thank you,<br/>Jeff";
+$mail->Body = "<p>Hello ".$name.",</p><p>Thank you for looking over my site. <br/> Here is your password for the next section:<strong> ".$password."</strong></p><p>Your email address: ".$email. "will be your user name when you log in.</p>";
+$mail->Body .= "<p>Thank you,<br/>Jeff</p>";
 
 $mail->send();
 }

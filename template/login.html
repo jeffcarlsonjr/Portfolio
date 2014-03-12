@@ -11,9 +11,9 @@
                     <div style="margin: 0px auto; width:90%">
                         <form method="post" name="login_form" novalidate ng-submit="loginForm()">
                             <label>
-                                Username/Email Address
+                                Email Address
                             </label><br/>
-                            <input type="email" name="username" ng-model="login.username"  placeholder="Username/Email Address" class="form-control" required/>
+                            <input type="email" name="username" ng-model="login.username"  placeholder="Email Address" class="form-control" required/>
                             <div class="error" ng-show="login_form.username.$dirty && login_form.username.$invalid">
                                 <small ng-show="login_form.username.$error.email">Invalid Email Format.</small>
                                 <small ng-show="login_form.username.$error.required">Username is required.</small>
