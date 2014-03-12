@@ -1,27 +1,28 @@
 .home{
-    width: 100%;
-    margin: 0px;
+    width: 100%; 
+    margin: 0px auto;
 }
-.home p{
+.wrapper p{
     font-size: 23px;
     margin: 15px 0px;
 }
 
 .rightHome{
-    width: 72%;
-    margin: 25px 0px;
-    float: right;
-    padding-right: 1%
+    width: 64%; 
+    height: 1000px; 
+    float: right; 
+    padding-right: 2%
 }
-rigthInner{
-    width: 95%;
+.rightInner{
+    /* width: 95%; */
+    /* min-height: 50px; */
 }
 
 .leftHome{
-    width: 25%;
-    min-height: 1100px;
-    background-color: #000000;
-    position: fixed;
+    width: 33%; 
+    min-height: 1200px; 
+    background-color: black; 
+    float: left
 }
 .innerLeft{
     width: 80%;
@@ -47,6 +48,8 @@ rigthInner{
 .photoDisplay{
     
     margin: 15px auto;
+    min-height: 50px;
+    overflow: hidden;
 }
 .photoDisplay ul{
     list-style: none;
@@ -66,7 +69,7 @@ rigthInner{
     width: 100%;
 }
 nav ul{
-    width:70%; 
+    width: 70%; 
     margin: 13px auto;
     list-style: none;
 }
@@ -79,6 +82,7 @@ nav li{
 
 nav a{
     color: #fff;
+    text-decoration: none;
 }
 nav a:hover{
     color: red;
@@ -111,8 +115,9 @@ input.ng-valid {
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-	background: url('./img/jeff.jpg') no-repeat;
-        margin: 0px auto;
+	background: url('./img/jeffbitstrip.png') no-repeat;
+        
+	margin: 0px auto;
 	}
 
 .circular img {
@@ -157,4 +162,54 @@ strong{
 }
 .newsBox a{
     color: rgb(101, 102, 102);
+}
+
+@media screen and (max-width: 900px){
+    .leftHome{
+    width: 100%;
+    min-height: 50px;
+    float: left;
+
+}
+.innerLeft{
+    width: 100%;
+    margin: 15px auto;
+    
+}
+.rightHome{
+    width: 100%;
+
+
+}
+.rightInner{
+    width: 95%;
+    margin: 0px auto;
+}
+nav ul{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 0px;
+}
+nav ul li{
+    float:none;
+    height: 33px;
+    width: 100%;
+    margin-left: 0px;
+}
+.homeli{
+    background-color: blue;
+}
+.photosli{
+    background-color: green;
+}
+.formsli{
+    background-color: blue;
+}
+.applicationli{
+    background-color: green;
+}
+.signupFrom{
+    width: 90%;
+}
 }

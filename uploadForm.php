@@ -40,7 +40,7 @@ $mail->WordWrap = 100;
 $mail->isHTML(true);
 
 $mail->Subject = "Email From Jeff's Website";
-$mail->Body = "<p>Hello ".$name.",</p><p>Thank you for looking over my site. <br/> Here is your password for the next section:<strong> ".$password."</strong></p><p>Your email address: ".$email. "will be your user name when you log in.</p>";
+$mail->Body = "<p>Hello ".$name.",</p><p>Thank you for looking over my site. <br/> Here is your password for the next section:<strong> ".$password."</strong></p><p>Your email address: ".$email. " will be your user name when you log in.</p>";
 $mail->Body .= "<p>Thank you,<br/>Jeff</p>";
 
 $mail->send();

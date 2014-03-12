@@ -17,7 +17,7 @@ function UPSDeliveryDate(id,col)
 
                     dataAvui = dataTemp;
                 }
-                console.log(dataAvui);
+//                console.log(dataAvui);
                 
                 var month = new Array(12); 
                     month[0]="January"; 
@@ -52,7 +52,7 @@ function UPSDeliveryDate(id,col)
                 
                 
                 var date = document.write.innerHTML="<br/>"+day[dataAvui.getDay()]+",<br/> "+ month[dataAvui.getMonth()] + ", "+ date+ ""; 
-                console.log(date);
+//                console.log(date);
                 document.getElementById('date'+col).innerHTML = date;
                 //return date;
             }

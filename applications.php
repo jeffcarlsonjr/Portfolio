@@ -1,18 +1,13 @@
 <?php
 include 'functions/globalClass.php';
-$tools = new tools();
+$person = new Users();
 
-
-if(empty($_SESSION['id']))
-{
-    
-    $tools->metaRedirect('0', '/Portfolio/#/login');
-}
-else {}
 
 ?>
 
 <div class="application col-lg-9">
+    
+    <?php if(!empty($_SESSION['id'])){ $person->findPerson($_SESSION['id']); }?>
  <!-- Start of Week at a Glance -->
  <!-- Very long script so just using a jQuery .load to call it-->
  <script>

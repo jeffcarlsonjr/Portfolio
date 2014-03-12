@@ -89,6 +89,21 @@ class Logins
    }
 }
 
+
+class Users
+{
+    public function findPerson($id)
+    {
+        $query = mysql_query("SELECT name FROM user WHERE id = '".$id."'");
+        $row = mysql_fetch_assoc($query);
+        
+        echo "<h2>Welcome ".$row['name']."!</h2>";
+    }
+}
+
+
+
+
 class tools
 {
     public function metaRedirect($length,$where)

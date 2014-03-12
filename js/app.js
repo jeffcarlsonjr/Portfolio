@@ -81,6 +81,7 @@ app.controller('loginController', function($scope,$http,$location){
                       $scope.status = status;
                       $scope.data = data;
                       $scope.result = data;
+                      console.log($scope.result)
                       if($scope.result !== '')
                       {
                           $location.path('/application');
@@ -89,8 +90,8 @@ app.controller('loginController', function($scope,$http,$location){
                       {
                           $location.path('/login');
                       }
-                      //
+                      
                   });
                       
-                  }
+                  };
               });
